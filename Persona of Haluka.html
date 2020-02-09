@@ -1,0 +1,580 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Persona of Haluka</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="6a32516b-5c27-4101-836e-0721460726a6" class="page sans"><header><img class="page-cover-image" src="Persona%20of%20Haluka/MIT-Martin-Trust-Center-8-copy.jpg" style="object-position:center 49.529999999999994%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">👩‍💻</span></div><h1 class="page-title">Persona of Haluka</h1></header><div class="page-body"><p id="7fc8776b-0dca-4be5-87ad-89cd42838483" class="">
+</p><div id="f33693eb-7f1c-4944-99b3-7770800608b6" class="column-list"><div id="91f8069c-24c0-4899-9b1e-aa9532675c18" style="width:50%" class="column"><p id="eae4b45d-8c27-42ed-a682-7b00666fe2c0" class="">
+</p><p id="a3cf76be-4747-42c6-8f50-be4f0b96874c" class="">
+</p><p id="3c918b3d-f184-47e3-9cd5-2fa0c160d2d8" class="">
+</p><figure id="4d3c2c0b-5acc-4845-8dee-b2c2b05b397e" class="image"><a href="Persona%20of%20Haluka/image-2.png"><img style="width:288px" src="Persona%20of%20Haluka/image-2.png"/></a></figure><p id="bbfa9c5b-af04-4a22-a98b-f36e4ee931c9" class="">
+</p><p id="bb79c6b7-b884-4251-ad46-6044eef19fd2" class="">
+</p></div><div id="efec9514-8ea7-4155-8ec5-c8c3ba7c8565" style="width:50%" class="column"><p id="aed24c00-1a3f-4232-8fb2-6969b7c3b38b" class="">👩<mark class="highlight-orange_background">Age:   </mark><strong><mark class="highlight-orange_background">29 </mark></strong></p><p id="da9c70e8-889a-4feb-a735-e7a12258baa3" class="">👷‍♀️<mark class="highlight-orange_background">Occupation:   </mark><strong><mark class="highlight-orange_background">Entrepreneur</mark></strong></p><p id="46e1177f-60f8-488d-b729-55ed35037a03" class="">🤷‍♀️<mark class="highlight-orange_background">Status:  </mark><strong><mark class="highlight-orange_background">Single, live alone in a rented place</mark></strong></p><p id="4a0afeb5-880a-4482-ac5a-98a1b43fc0bd" class="">🚘<mark class="highlight-orange_background">Location:   </mark><strong><mark class="highlight-orange_background">Boston, MA, US</mark></strong></p><p id="12ec13e6-aec8-486c-a64f-104f9484ed1c" class="">🤳<mark class="highlight-orange_background">Tier:   </mark><strong><mark class="highlight-orange_background">Pioneer user</mark></strong></p><p id="e399828a-cfcb-4607-a5cf-85d124c9aa1c" class="">📝<mark class="highlight-orange_background">Focus:  </mark><strong><mark class="highlight-orange_background"> Collaboration, Work efficiency</mark></strong></p><p id="1b5fb91a-92ac-4e3b-b32c-8c0aaa0301ab" class="">
+</p><blockquote id="f61c7866-a9ad-4852-8436-326416628e83" class=""><strong>“It’s not that things are complicated. It’s about the things have to get through many hands and no one takes them as priority because they are chores!”</strong></blockquote><p id="3413765d-6312-420f-b378-71b09ab7fcdd" class="">
+</p></div></div><hr id="2ea04a57-0171-4593-88b9-1f01c5cea043"/><h2 id="cc3ea67b-42e5-4c87-a0ed-0c6a6a349d08" class="">👶Bio</h2><p id="e3a93b1e-f872-40b3-a404-4b6b4b5dfe21" class="">
+</p><p id="93e94bf8-2455-437f-86e2-86c859cd313c" class="">Haluka is a young entrepreneur. She opened a new media company with her former Thailand classmate.</p><p id="e5502c49-f03e-40ba-bcc4-05176a136f0d" class="">She graduated from MIT and she has a broad connection with multiple small creative communities. <strong><mark class="highlight-blue_background">Compared to working under chain of command in big companies, she much preferred to work on self-oriented projects through collaboration with a small number of trusted people with mutual interests.</mark></strong></p><p id="695ad375-4f3b-44bd-8db1-7aa5c01d787a" class="">Her focus is self-growth and discovery of new scopes. Naturally she desires self-managed work time flexibility and broader cross-disciplinary collaboration with different people.</p><p id="142352b6-7dc9-4859-9a78-48c7f16159a8" class="">As an entrepreneur, <mark class="highlight-blue_background"><strong>her timetable is always changeable</strong></mark>, and she have to handle most chores in life and business on her own.</p><p id="722c6a3e-e5de-4192-8553-c59753049f81" class="">Her company has 2 core members and 3 outsource coders. She also has a couple of funders and clients.</p><h3 id="26ed3aed-ea37-44df-b01e-a690ae95a596" class="">During her one day: </h3><ul id="6ad49ffb-e322-4957-a369-819c72e94a82" class="bulleted-list"><li>she wakes up in the morning and then has a core meeting with her co-founder.</li></ul><ul id="319a9ad6-4afb-4d2a-91b7-deb8745cb603" class="bulleted-list"><li> In the morning she communicates with clients and funders: send emails, make calls and goes out to meet people. </li></ul><ul id="cef3ef80-39d4-443d-ba0d-0f853b8e518a" class="bulleted-list"><li>From afternoon to evening she sits in front of the computer to conceive new ideas and work on the projects.</li></ul><ul id="b799da32-7948-4e38-8a7d-52a1cda4f467" class="bulleted-list"><li> At night, she meets with outsource workers in another time zone and collaborates on projects.</li></ul><p id="948ef2d3-3329-4d0e-a6e0-52c3ef353930" class="">
+</p><h2 id="e460d122-b7ec-495c-a933-456c374b33fb" class="">🐱‍🏍Motivation</h2><p id="76e35dbd-826c-494f-b75c-72966f02e794" class="">
+</p><p id="1bb94aac-690a-4be7-a36b-8a030b9ed40b" class="">Haluka’s team shares Dropbox storing in-progress project files with co-founders and outsource coders to <mark class="highlight-blue_background"><strong>keep track with everyone’s progress.</strong></mark></p><p id="12f7d053-bd97-4769-b1ce-578f3edae8e0" class="">Haluka’s team uses Dropbox to <mark class="highlight-blue_background"><strong>store a complete package of files for a monumental benchmark</strong></mark> of business, such as presentation to investors, pre-exhibition check and hand-in to clients.</p><p id="9c267025-0dd1-43e2-81fe-7a1942f0ae79" class="">Haluka uses share link function in Google Drive to <mark class="highlight-blue_background"><strong>give out (limited) project information to interested third parties</strong></mark>.</p><p id="b91da12c-f5f8-468f-8b2b-c4991db8593a" class="">Haluka uses Dropbox and Google Sheet to ask everyone in the team to <mark class="highlight-blue_background"><strong>fill up reimbursement forms</strong></mark>. Then she hands in a whole team form to her funder, receives modification requests from the latter and makes the final version.</p><p id="098335cb-863e-4fb2-b046-8e1db9cd1ade" class="">
+</p><h2 id="e43c5bc4-d8f5-45ba-a22b-c424e8eaf58e" class="">🎡Goal </h2><ul id="5d21e8b0-a2f8-45c0-aa49-52aafec067f4" class="bulleted-list"><li><strong>Back up a complete package of crucial project files at every benchmark.</strong></li></ul><ul id="15670df7-2212-496e-baeb-0a613edca34e" class="bulleted-list"><li><strong>Keep track with every co-worker’s progress and make sure each person has access to necessary working files.</strong></li></ul><ul id="9d52178e-2eff-4a31-83b0-f98162f185c5" class="bulleted-list"><li><strong>Give out project information easily to interested third-party, at the same time control their access to core project files.</strong></li></ul><ul id="b1bf37d9-8164-4d19-b9d2-3c1c3b7471ed" class="bulleted-list"><li><strong>Transfer forms that need to be filled up from one hand to another</strong></li></ul><p id="2b9fb6c6-0f99-4aea-aa55-5fe1932051be" class="">
+</p><h2 id="db9e754b-ab41-445b-9ddf-3c90a50e3142" class="">😫Frustrations</h2><p id="72d313fd-60f1-43dc-8c54-d212e7cd83d2" class="">
+</p><ul id="b29f0fcf-be4d-4182-a7a3-8917eef24311" class="bulleted-list"><li>Super<mark class="highlight-blue_background"><strong> inefficient to wait for one person filling up the form</strong></mark> before transferring to another none. Yet if open access to everyone at the same time, authorities’ modification can’t be distinguished from filling trials of ordinary workers.</li></ul><ul id="224c4b12-81e9-441d-83ad-68d0af08c2f5" class="bulleted-list"><li><strong><mark class="highlight-blue_background">Lack of differentiation between documents</mark></strong> stored for self-use and documents stored because of others’ sharing. Can’t delete irrelevant files because of fear of messing up with the team&#x27;s common back-up.</li></ul><ul id="674e4394-a3f4-4b73-ac10-b0dd0a4e0fb2" class="bulleted-list"><li><strong><mark class="highlight-blue_background">Small storage space</mark></strong> can be full very quickly because of others’ sharing.</li></ul><ul id="9e231b56-229a-4a71-9449-e2d5cfb196d9" class="bulleted-list"><li>Occasionally <mark class="highlight-blue_background"><strong>forget to upload files from local to shared cloud space.</strong></mark></li></ul><p id="5d3f8db5-f9b9-4e67-bc90-8cf7199bc66b" class="">
+</p></div></article></body></html>
