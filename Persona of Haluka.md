@@ -1,6 +1,6 @@
-# Pesona of Haluka
+# Persona of Haluka
 
-![Pesona%20of%20Haluka/image-2.png](Pesona%20of%20Haluka/image-2.png)
+![Persona%20of%20Haluka/image-2.png](Persona%20of%20Haluka/image-2.png)
 
 👩Age:   **29** 
 
